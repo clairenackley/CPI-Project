@@ -2,7 +2,7 @@
 Claire, Angel, and Gavi's CPI 
 
 2 Definition of the Index
-
+2.1 Items and Weights
     textbooks.25 + food.25 + transportation.04 + hygiene.1 + rent.15 + apparel.03 + entertainment.08 +medicalservices.1
 Justification: textbooks(SSEA011) are expensive and we need new ones every semester
                food(SAF) is needed to live - need most often
@@ -13,9 +13,22 @@ Justification: textbooks(SSEA011) are expensive and we need new ones every semes
                Streaming (SERA02)
                medical services(SAM) - a necessity, tends to be expensive, people get sick in college a lot
 
-
-
+2.2 Locations and Weights
 Locations; NYC:S12A
 Pittsburgh: A104
 Philadelphia: S12B
+
+2.3 Finalizing the basket
+
+3 Downloading the basket
+3.1 Refine the basket
+
+
+3.2 Downloading 
+
+
+4 Aggregating 
+
+
+5 Inflation
 
