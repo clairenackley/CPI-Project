@@ -14,9 +14,11 @@ Justification: textbooks(SSEA011) are expensive and we need new ones every semes
                medical services(SAM) - a necessity, tends to be expensive, people get sick in college a lot
 
 2.2 Locations and Weights
-Locations; NYC:S12A
-Pittsburgh: A104
-Philadelphia: S12B
+Locations: NYC:S12A:
+Pittsburgh: A104:
+Philadelphia: S12B:
+
+.5(PGH) + .3(NYC) + .2(PHI) 
 
 2.3 Finalizing the basket
 
