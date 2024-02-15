@@ -32,7 +32,7 @@ basketCPI = ['CUUR0000SA0']
 for i in item:
     for a in area:
         basketCPI.append(prefix+a+i)
-
+basketCPI
 
 3 Downloading the basket
 3.1 Refine the basket
