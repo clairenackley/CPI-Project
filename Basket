@@ -42,6 +42,9 @@ basketCPI
 
 
 4 Aggregating 
+nrows, ncols = df.shape
+df["myCPI"] = np.zeros(nrows)
+df
 
 
 5 Inflation
