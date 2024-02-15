@@ -20,7 +20,19 @@ Philadelphia: S12B:
 
 .5(PGH) + .3(NYC) + .2(PHI) 
 
+
+
 2.3 Finalizing the basket
+
+prefix = 'CUUR'
+area = ['S12A','A104','S12B']
+item = ['SSEA011','SAF','SAT','SA0L1E','SASR2S','SA311','SERA02', 'SAM']
+
+basketCPI = ['CUUR0000SA0']
+for i in item:
+    for a in area:
+        basketCPI.append(prefix+a+i)
+
 
 3 Downloading the basket
 3.1 Refine the basket
