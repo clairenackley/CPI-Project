@@ -61,4 +61,26 @@ df
 
 
 5 Inflation
+cpi = df["CPI_U"]
+mycpi = df["myCPI"]
 
+def myinflation(lag):
+    # This function computes the percent change in the level of myCPI (inflation) for the 
+    # 12 months starting '12+lag' months ago and ending 'lag' months ago.
+    # lag is an integer input
+    
+    new = mycpi[lag]
+    old = mycpi[12+lag]
+    
+    change = (new/old - 1)*100
+    
+    return change
+
+def generalinflation(lag):
+    
+    new = cpi[lag]
+    old = cpi[12+lag]
+    
+    change = (new/old - 1)*100
+    
+    return change
