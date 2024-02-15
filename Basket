@@ -23,6 +23,18 @@ Philadelphia: S12B:
 areaWeights = [0.5, 0.3, 0.2]
 itemWeights = [0.25, 0.25, 0.04, 0.1, 0.03, 0.15,0.03, .08, .1]
 
+weights =[]
+
+for a in range(len(area)):
+    for i in range(len(item)):
+        weights. append(areaWeights[a]*itemWeights[i])
+sum(weights)
+
+for i in range(len(weights)):
+    df.myCPI += weights[i]*df[basketCPI[i+1]]
+
+df.myCPI
+
 2.3 Finalizing the basket
 
 prefix = 'CUUR'
