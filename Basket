@@ -52,10 +52,10 @@ def multiSeriesV4(varList,myKey):
     for item in range(n):
         l = len(json_data['Results']['series'][item]['data']) #length of the list
         if l == 0:
-            print('Series ',varList[item],' does not exist')
+            print('series ',varList[item],' does not exist')
         else:
             
-            print('Series ',varList[item],' exists with ',l,' observations')
+            print('series ',varList[item],' exists with ',l,' observations')
             d = json_data['Results']['series'][item]['data']
             current_df = pd.DataFrame(data=d)
             current_df = current_df[['year','period','value']].astype({'value': 'float64'})
@@ -63,7 +63,6 @@ def multiSeriesV4(varList,myKey):
             new_df = new_df.merge(current_df, on = ['year','period'],how='outer')
     
     return new_df
-
 
 2.2 Locations and Weights
 Locations: NYC:S12A:
@@ -136,3 +135,4 @@ def generalinflation(lag):
     change = (new/old - 1)*100
     
     return change
+
