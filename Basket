@@ -235,6 +235,91 @@ df2["myCPI"] = np.zeros(nrows)
 
 df2
 
+#Creating Weights
+len(area)
+
+len(item)
+
+areaWeights = [0.5, 0.1, 0.4]
+itemWeights = [0.3, 0.15, 0.17, 0.1, 0.13, 0.15]
+
+sum(itemWeights)
+
+
+weights =[]
+
+for a in range(len(area)):
+    for i in range(len(item)):
+        weights. append(areaWeights[a]*itemWeights[i])
+
+
+weights
+
+sum(weights)
+
+for i in range(len(weights)):
+    df2.myCPI += weights[i]*df2[basketCPI[i+1]]
+
+df2.myCPI
+
+cpi = df2["CPI_U"]
+mycpi = df2["myCPI"]
+
+type(cpi)
+
+def myinflation(lag):
+    # This function computes the percent change in the level of myCPI (inflation) for the 
+    # 12 months starting '12+lag' months ago and ending 'lag' months ago.
+    # lag is an integer input
+    
+    new = mycpi[lag]
+    old = mycpi[12+lag]
+    
+    change = (new/old - 1)*100
+    
+    return change
+
+def generalinflation(lag):
+    # This function computes the percent change in the level of general CPI (inflation) for the 
+    # 12 months starting '12+lag' months ago and ending 'lag' months ago.
+    # lag is an integer input
+    
+    new = cpi[lag]
+    old = cpi[12+lag]
+    
+    change = (new/old - 1)*100
+    
+    return change
+
+
+obs = nrows - 12 
+print(f"There are {obs} months in our inflation data")
+
+temp = map(myinflation,range(obs))
+type(temp)
+
+myInflation = list(map(myinflation,range(obs)))
+myInflation.reverse()
+
+lags = list(range(obs))
+lags.reverse()
+lags = list(map(str,lags))
+
+Inflation = list(map(generalinflation,range(obs)))
+Inflation.reverse()
+
+plt.figure(figsize = (20,10))
+
+plt.plot(lags,Inflation, color='blue', marker='o', linestyle='solid', label = "General CPI")
+plt.plot(lags,myInflation, color='green', marker='*', linestyle='dashed', label = "My CPI")
+plt.legend(loc = 'upper left')
+plt.title("12-Month Inflation: My CPI v.s. General CPI")
+plt.xlabel("Lag (months)")
+plt.ylabel("Inflation (%)")
+plt.show()
+
+generalinflation(0)
+
 
 
 
