@@ -225,12 +225,12 @@ basketCPI
 
 df2 = multiSeriesV4(basketCPI, key)
 
-df2 = df.rename(columns = {"CUUR0000SA0":'CPI_U'})
+df2 = df2.rename(columns = {"CUUR0000SA0":'CPI_U'})
 df2.head(10)
 ##(Need to figure out why there is NAN in some of the cells)
 
 #Aggregating 
-nrows, ncols = df.shape
+nrows, ncols = df2.shape
 df2["myCPI"] = np.zeros(nrows)
 
 df2
